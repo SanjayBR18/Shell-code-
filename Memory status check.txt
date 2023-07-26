@@ -1,0 +1,6 @@
+#!/bin/bash
+mem = `df -h . | tail -1 | awk-F "" '{print $4}' | sed's/%/ /g'`
+if [ $mem -gt 60 ]
+ mail -s "memory has reached  X percentage" -c sanjay123@gmail.com < sanjay
+
+fi
